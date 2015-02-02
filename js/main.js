@@ -19,35 +19,48 @@ var dico_accroche = ["Incroyable !", "Scoop:", "Inimaginable !", "Exclu SudPresq
 var dico_people = ["Barack Obama", "Charles Michel", "Justin Bieber", "Elio Di Rupo", "Bart de Wever", "Maggie de Block", "Jan Jambon", "Raoul Reyers", "Kate Middleton", "Justine Henin", "Nabila", "Michaël Schumacher", "Marc Wilmots", "Steven Defour", "Britney Spears", "Cyril Hanouna", "Kim Kardashian", "Johny Hallyday", "François Hollande", "Sarko", "l'héroïne de Hunger Games"];
 var dico_people_action = ["s'expose une fois de plus sur Instagram", "dans une sextape choc", "très sexy dans une campagne de pub", "fait son coming out", "publie des selfies coquins", "n'écoute jamais La Première", "se prostitue pour payer sa voiture", "plaque tout par amour pour un adolescent !", "se dévoile dans un penthouse londonien"];
 
+//titres à suspense
+var dico_imperatif  = ["Découvrez ce que", "Regardez ce que", "Vous ne devinerez jamais ce que", "C'est époustouflant ce que", "Vous n'imaginez pas ce que"];
+var dico_sujet3     = ["cet homme", "cette femme", "ce chien", "cette petite fille", "ce bébé", "cet énorme chat", "ce vieux croulant", "cette mamy"];
+var dico_action     = ["s'apprête à faire", "est sur le point de faire", "a réalisé", "a cultivé", "a osé faire", "a voulu faire", "a réussi à accomplir"];
+var dico_complement = ["avec une gousse d'ail", "à l'aide d'un simple bout de bois", "avec le chat du voisin", "avec cette botte de poireaux", "avec son arrière-train", "avec une simple patate"];
+
 function titleRandom() {
 
-	var ville = dico_ville[Math.floor(Math.random() * dico_ville.length)];
-	var sujet = dico_sujet[Math.floor(Math.random() * dico_sujet.length)];
-	var sujet2 = dico_sujet2[Math.floor(Math.random() * dico_sujet2.length)];
-	var verbe = dico_verbe[Math.floor(Math.random() * dico_verbe.length)];
-	var objet = dico_objet[Math.floor(Math.random() * dico_objet.length)];
-	var qui = dico_qui[Math.floor(Math.random() * dico_qui.length)];
-	var quoi = dico_quoi[Math.floor(Math.random() * dico_quoi.length)];	
-	var accroche = dico_accroche[Math.floor(Math.random() * dico_accroche.length)];	
-	var people = dico_people[Math.floor(Math.random() * dico_people.length)];	
-	var people_action = dico_people_action[Math.floor(Math.random() * dico_people_action.length)];	
+  var ville         = dico_ville[Math.floor(Math.random() * dico_ville.length)];
+  var sujet         = dico_sujet[Math.floor(Math.random() * dico_sujet.length)];
+  var sujet2        = dico_sujet2[Math.floor(Math.random() * dico_sujet2.length)];
+  var verbe         = dico_verbe[Math.floor(Math.random() * dico_verbe.length)];
+  var objet         = dico_objet[Math.floor(Math.random() * dico_objet.length)];
+  var qui           = dico_qui[Math.floor(Math.random() * dico_qui.length)];
+  var quoi          = dico_quoi[Math.floor(Math.random() * dico_quoi.length)];
+  var accroche      = dico_accroche[Math.floor(Math.random() * dico_accroche.length)];
+  var people        = dico_people[Math.floor(Math.random() * dico_people.length)];
+  var people_action = dico_people_action[Math.floor(Math.random() * dico_people_action.length)];
+  var imperatif     = dico_imperatif[Math.floor(Math.random() * dico_imperatif.length)];
+  var sujet3        = dico_sujet3[Math.floor(Math.random() * dico_sujet3.length)];
+  var action        = dico_action[Math.floor(Math.random() * dico_action.length)];
+  var complement    = dico_complement[Math.floor(Math.random() * dico_complement.length)];
 
-	var titleNumber = Math.floor((Math.random() * 3) + 1);
+  var titleNumber = Math.floor((Math.random() * 4) + 1);
 
-	if(titleNumber == 1) {
-		randomTitle = ville+': un '+sujet+' '+verbe+' '+qui+' '+quoi;
-	}
-	else if(titleNumber == 2) {
-		randomTitle = objet+', '+sujet2+' '+verbe+' '+qui+' '+quoi;
-	}
-	else if(titleNumber == 3) {
-		randomTitle = accroche+' '+people+' '+people_action;
-	}
+  if (titleNumber == 1) {
+    randomTitle = ville+': un '+sujet+' '+verbe+' '+qui+' '+quoi;
+  }
+  else if (titleNumber == 2) {
+    randomTitle = objet+', '+sujet2+' '+verbe+' '+qui+' '+quoi;
+  }
+  else if (titleNumber == 3) {
+    randomTitle = accroche+' '+people+' '+people_action;
+  }
+  else if (titleNumber == 4) {
+    randomTitle = imperatif+' '+sujet3+' '+action+' '+complement;
+  }
 
 
-	title.innerHTML = randomTitle;
-	twitter.href="https://twitter.com/intent/tweet?text="+randomTitle+" -&url=http://presquetitres.be";
-    
+  title.innerHTML = randomTitle;
+  twitter.href="https://twitter.com/intent/tweet?text="+randomTitle+" -&url=http://presquetitres.be";
+
 }
 
 window.onload = titleRandom;
