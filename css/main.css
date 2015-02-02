@@ -638,13 +638,17 @@ h1 {
     font-weight: normal;
 }
 
-p {
+#title {
     font-size: 180%;
     margin: 0.5em 0;
 }
 
 footer {
     margin: 2em auto 0;
+}
+
+footer p {
+    margin: 0.2em 0;
 }
 
 footer a {
