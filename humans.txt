@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Paul-Philippe Nelles -- Web Developper -- @ppnelles
+
+# THANKS
+
+    NordPresse.be, lapremiere.be
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    JavaScript
