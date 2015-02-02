@@ -10,15 +10,27 @@
         <meta name="description" content="Toi aussi, génère un titre d'article digne de SudPresse. C'est facile !">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css?v=3.1">
+                <script>
+        window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+        </script>
     </head>
     <body>
         <div class="generator">
             <h1>Génère le "Presque Titre" d'un article SudPresse:</h1>
             <p id="title"></p>
-            <button id="generate">Allez, encore un</button>
+            <button id="generate">Allez, encore un!</button>
 
             <footer>
-                <a target="_blank" id="twitter" href="https://twitter.com/intent/tweet?text=MON_TEXTE&url=MON_URL" title="Partager mon titre sur Twitter">Tweet ton titre !</a>
+              <div id="twitterbtn">
+                <a id="twitter" class="twitter-share-button" title="Partager mon titre sur Twitter"
+                  href="https://twitter.com/share"
+                  data-url="http://presquetitres.be"
+                  data-via="presquetitres"
+                  data-counturl="https://dev.twitter.com/web/tweet-button"
+                  data-count="vertical">
+                Tweet
+                </a>
+              </div>
 
                 <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://presquetitres.be" title="Partager cette page sur Facebook">Partage sur Facebook !</a>
             </footer>
@@ -27,7 +39,7 @@
         <footer class="author">
             <p>
                 <a href="http://www.ppnelles.com" title="Le créateur de ce générateur débile">Réalisé par ppnelles.com</a>
-               <a href="http://www.nordpresse.be" title="Des vrais news, pas comme nos titres !">Avec NordPresse.be</a> 
+               <a href="http://www.nordpresse.be" title="Des vrais news, pas comme nos titres !">Avec NordPresse.be</a>
                <a href="https://www.facebook.com/CPSRTBF" title="La page facebook de l'émission">On joue dans #CPSRTBF</a>
            </p>
            <p>
@@ -46,6 +58,8 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-46068757-1');ga('send','pageview');
         </script>
+
+
 
     </body>
 </html>

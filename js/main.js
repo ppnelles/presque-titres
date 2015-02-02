@@ -1,7 +1,7 @@
 var generate = document.getElementById("generate");
 var title = document.getElementById("title");
 var randomTitle = "";
-var twitter = document.getElementById("twitter");
+var twitter = document.getElementById("twitterbtn");
 
 //faits divers initialement créé
 var dico_ville = ["Liège", "Amblève", "Marche", "Vielsalm", "Malmedy", "Gerpine", "Charleroi", "Mons", "Verviers", "Amay", "Ostende", 'Namur', "Schaarbeek", "Bruges", "Namur","Charleroi","Groenland","Texas","Pont-à-Celles","Verviers","Molenbeek","Ixelles","Schaerbeek","Saint-Josse","Anvers"];
@@ -27,10 +27,10 @@ function titleRandom() {
 	var verbe = dico_verbe[Math.floor(Math.random() * dico_verbe.length)];
 	var objet = dico_objet[Math.floor(Math.random() * dico_objet.length)];
 	var qui = dico_qui[Math.floor(Math.random() * dico_qui.length)];
-	var quoi = dico_quoi[Math.floor(Math.random() * dico_quoi.length)];	
-	var accroche = dico_accroche[Math.floor(Math.random() * dico_accroche.length)];	
-	var people = dico_people[Math.floor(Math.random() * dico_people.length)];	
-	var people_action = dico_people_action[Math.floor(Math.random() * dico_people_action.length)];	
+	var quoi = dico_quoi[Math.floor(Math.random() * dico_quoi.length)];
+	var accroche = dico_accroche[Math.floor(Math.random() * dico_accroche.length)];
+	var people = dico_people[Math.floor(Math.random() * dico_people.length)];
+	var people_action = dico_people_action[Math.floor(Math.random() * dico_people_action.length)];
 
 	var titleNumber = Math.floor((Math.random() * 3) + 1);
 
@@ -46,8 +46,27 @@ function titleRandom() {
 
 
 	title.innerHTML = randomTitle;
-	twitter.href="https://twitter.com/intent/tweet?text="+randomTitle+" -&url=http://presquetitres.be";
-    
+
+ 	var elem = document.getElementById('twitter');
+
+	if (elem != null) {
+    elem.parentNode.removeChild(elem);
+  }
+
+  var link = document.createElement('a');
+  link.setAttribute('href', 'https://twitter.com/share');
+  link.setAttribute('class', 'twitter-share-button');
+  link.setAttribute('id', 'twitter');
+  link.setAttribute("data-text", "" + title.innerHTM + "");
+  link.setAttribute("data-via", "presquetitres");
+  link.setAttribute("data-counturl", "https://dev.twitter.com/web/tweet-button");
+  link.setAttribute("data-count", "vertical");
+  link.setAttribute("data-url", "http://presquetitres.be");
+
+  twitter.appendChild(link);
+
+  twttr.widgets.load();
+
 }
 
 window.onload = titleRandom;
