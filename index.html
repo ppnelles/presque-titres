@@ -12,13 +12,21 @@
   <link rel="stylesheet" href="css/main.css?v=3.1">
 </head>
 <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=216808261732198&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <div class="generator">
     <h1>Génère le "Presque Titre" d'un article SudPresse:</h1>
     <p id="title"></p>
     <button id="generate">Allez, encore un!</button>
     <footer>
       <div id="twitterbtn"></div>
-      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://presquetitres.be" title="Partager cette page sur Facebook">Partage sur Facebook !</a>
+      <div class="fb-share-button" data-href="http://www.presquetitres.be/" data-layout="box_count"></div>
     </footer>
   </div>
   <footer class="author">

@@ -645,6 +645,8 @@ h1 {
 
 footer {
     margin: 2em auto 0;
+    width: 140px;
+    height: 75px;
 }
 
 footer p {
@@ -653,6 +655,15 @@ footer p {
 
 footer a {
     font-size: 90%;
+}
+
+footer div {
+    float: left;
+    margin-right: 10px;
+}
+
+footer.author {
+    width: 100%;
 }
 
 a {
