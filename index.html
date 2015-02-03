@@ -9,34 +9,58 @@
         <title>Générateur de "Presque Titres" de presse</title>
         <meta name="description" content="Toi aussi, génère un titre d'article digne de SudPresse. C'est facile !">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css?v=3.1">
+        <link href="http://fonts.googleapis.com/css?family=Questrial%7CMontserrat:400,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
+
+        <nav class="top">
+            <a href="./quizz/">Jouer au Quizz !</a>
+            <a href="https://www.facebook.com/pages/Le-g%C3%A9n%C3%A9rateur-de-Presque-Titres/1745427352349685">Facebook</a>
+            <a href="https://twitter.com/presquetitres">Twitter</a>
+        </nav>
+
+        <header class="intro">
+            <div>
+                <h1>Les "Presque Titres"</h1>
+                <p>
+                    Génère aléatoirement le "Presque Titre" du prochain fait-divers. Avec un peu de chance, celui se retrouvera prochainement dans un vrai article de Sud Presse...
+                </p>
+            </div>
+        </header>
+
         <div class="generator">
-            <h1>Génère le "Presque Titre" d'un article SudPresse:</h1>
-            <p id="title"></p>
+            <h2 id="title"></h2>
+            <ul class="share">
+                <li class="twitter">
+                    <a target="_blank" id="twitter" href="https://twitter.com/intent/tweet?text=MON_TEXTE&url=MON_URL" title="Partager mon titre sur Twitter">Tweet ton titre !</a>
+                </li>
+                <li class="facebook">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://presquetitres.be" title="Partager cette page sur Facebook">Partage sur Facebook !</a>
+                </li>
+            </ul>
             <button id="generate">Allez, encore un</button>
-
-            <footer>
-                <a target="_blank" id="twitter" href="https://twitter.com/intent/tweet?text=MON_TEXTE&url=MON_URL" title="Partager mon titre sur Twitter">Tweet ton titre !</a>
-
-                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://presquetitres.be" title="Partager cette page sur Facebook">Partage sur Facebook !</a>
-            </footer>
+            <p>
+                <span>Ou alors...</span>
+                <span><a href="./quizz/" title="Jouez au Quizz des Vrais/Faux Titre">Jouez au quizz des vrais/faux titres</a></span>
+            </p>
         </div>
 
-        <footer class="author">
-            <p>
-                <a href="http://www.ppnelles.com" title="Le créateur de ce générateur débile">Réalisé par ppnelles.com</a>
-               <a href="http://www.nordpresse.be" title="Des vrais news, pas comme nos titres !">Avec NordPresse.be</a> 
-               <a href="https://www.facebook.com/CPSRTBF" title="La page facebook de l'émission">On joue dans #CPSRTBF</a>
-           </p>
-           <p>
-               <a href="https://www.facebook.com/pages/Le-générateur-de-Presque-Titres/1745427352349685?fref=nf" title="Soyez sympa, likez la page FB">"Like" sur Facebook</a>
-               <a href="https://github.com/ppnelles/presque-titres" title="On attends vos Pull Requests !">Contribue via GitHub</a>
-           </p>
-        </footer>
+        <nav class="bottom">
+            <div class="author">
+                <a href="http://ppnelles.com" title="L'auteur de toutes ces conneries">Réalisé par ppnelles</a>
+                <a href="http://www.nordpresse.be" title="Des vrais news, pas comme nos titres !">Avec NordPresse.be</a> 
+                <a href="https://www.facebook.com/CPSRTBF" title="La page facebook de l'émission">#CPSRTBF</a>
+            </div>
+            <div class="project">
+                <a href="http://presquetitres.be/quizz">Jouer au Quizz</a>
+                <a href="https://www.facebook.com/pages/Le-g%C3%A9n%C3%A9rateur-de-Presque-Titres/1745427352349685">Facebook</a>
+                <a href="https://twitter.com/presquetitres">Twitter</a>
+                <a href="https://github.com/ppnelles/presque-titres" title="On attends vos Pull Requests !">Fork on GitHub</a>
+            </div>
+        </nav>
 
-        <script src="js/main.js?v=2"></script>
+        <script src="js/generator.js"></script>
 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

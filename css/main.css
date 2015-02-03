@@ -625,17 +625,29 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
 body {
-    width: 90%;
-    margin: 2em auto 0;
-    text-align: center;
+    font-family: 'Questrial',Helvetica,Arial,Verdana,Sans-Serif;
+    color: #303030;
+}
+
+h1 {
+    font-family: 'Montserrat','Questrial',Helvetica,Arial,Verdana,Sans-Serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #1b1b1b;
+    font-size: 120%;
+    margin: 0;
 }
 
 h1 {
     font-size: 100%;
     font-weight: normal;
+}
+
+a {
+    color: #00aeef;
 }
 
 #title {
@@ -655,27 +667,219 @@ footer a {
     font-size: 90%;
 }
 
-a {
-    color: #00aeef;
-    margin: 0 0.25em;
+input[type="radio"]:hover,
+label:hover {
+    cursor: pointer;
 }
 
-.generator {
-    padding: 1em;
-    background-color: #f6f6f6;
-    border: 1px solid #a7a7a7;
-    border-radius: 3px;
-}
-
+a.more,
 button {
     background-color: #7f090d;
     color: white;
+    font-family: 'Montserrat','Questrial',Helvetica,Arial,Verdana,Sans-Serif;
     text-transform: uppercase;
+    font-size: 130%;
+    padding: 0.5em 1em;
     border: none;
-    border-radius: 3px;
-    padding: 0.8em 1em;
+    text-decoration: none;
+    outline: none;
 }
 
-.author a {
+a.more:hover,
+button:hover {
+    background-color: #003777;
+    outline: none;
+}
+
+.intro {
+    background: transparent url('../img/header-read.jpg') center center no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    padding: 7em 0;
+    margin: 0 0 3em;
+    color: white;
+    text-align: center;
+}
+
+.intro div {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.intro h1 {
+    color: white;
+    margin-top: 0;
+    font-size: 150%;
+}
+
+.generator {
+    width: 90%;
+    max-width: 1000px;
+    margin: 3em auto 6em;
+    text-align: center;
+}
+
+#generate {
+    margin: 1em 0 0;
+}
+
+.generator p span {
+    display: block;
+}
+
+nav.bottom a {
     color: #333333;
+}
+
+.quizz ol a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+ol,
+.final-result {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+ol {
+    padding: 0;
+}
+
+ol li {
+    margin: 0 0 1.5em;
+    padding: 10px 10px 10px 70px;
+    list-style: none;
+    background-color: #efefef;
+    border-radius: 3px;
+}
+
+.answers  {
+    margin: 1em 0 0;
+}
+
+.answers span {
+    margin: 0 2em 0 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.answers span label {
+    padding: 0 0.3em;
+}
+
+li.win {
+    background: #eaf5e9 url('../img/true-48.png') 10px center no-repeat;
+}
+
+li.lose {
+    background: #fae2e2 url('../img/false-48.png') 10px center no-repeat;
+}
+
+p.correction {
+    margin: 1em 0 0;
+}
+
+.final-result {
+    text-align: center;
+    background-color: #efefef;
+    border-radius: 3px; 
+    margin: 1em auto 0;
+    padding: 2em 1em;
+    font-size: 110%;
+}
+
+.final-result h2 {
+    font-family: 'Montserrat','Questrial',Helvetica,Arial,Verdana,Sans-Serif;
+    font-size: 160%;
+    text-transform: uppercase;
+    margin: 0 0 0.3em;
+}
+
+.final-result p {
+    margin: 0;
+    font-size: 105%;
+}
+
+.share {
+    padding: 0;
+    margin: 0.5em 0 0;
+}
+
+.share li {
+    display: inline-block;
+    padding: 0 0.2em;
+}
+
+.share li.twitter {
+    position: relative;
+    top: -1px;
+}
+
+.share li a {
+    display: block;
+    text-indent: -9999em;
+}
+
+.share li.facebook a {
+    width: 59px;
+    height: 20px;
+    background: transparent url('../img/facebook.png') 0 0 no-repeat;
+}
+
+.share li.twitter a {
+    width: 57px;
+    height: 22px;
+    background: transparent url('../img/tweet.png') 0 0 no-repeat;
+}
+
+nav {
+    padding: 0 2.5%;
+}
+
+nav.top {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1em 0.5em;
+    margin: 0 0.25em;
+    font-size: 90%;
+}
+
+nav.top a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav.top a:hover {
+    text-decoration: underline;
+}
+
+nav div {
+   width: 50%;
+   float: left;
+}
+
+nav .project {
+    text-align: right;
+}
+
+@media screen and (min-width: 1100px) {
+  .intro {
+    padding: 8em 0;
+  }
+}
+
+.action {
+    text-align: center;
+    margin: 1em 0 3em;
 }
