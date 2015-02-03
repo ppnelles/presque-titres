@@ -1,5 +1,7 @@
 ﻿<?php 
 
+
+
 DEFINE ('LOGIN', 'root');
 DEFINE ('PASS', 'root');
 DEFINE ('HOST', 'localhost');
