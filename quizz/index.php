@@ -23,7 +23,7 @@ include("db.php");
     		<div>
 	    		<h1>Le quizz des "Presque Titres"</h1>
 	    		<p>
-	    			Es-tu incollable sur l'actu de la presse-poubelle ? Si dessous, tu trouveras 10 titres de presse. 5 sont des articles publiés sur des sites belges, les autres sortent de notre esprit dérangé. Sauras-tu différencier le vrai du faux ?
+	    			Es-tu incollable sur l'actu de la presse-poubelle ? Si dessous, tu trouveras 10 titres de faits-divers. 5 sont des articles publiés sur des sites belges, les autres sortent de notre esprit dérangé. Sauras-tu différencier le vrai du faux ?
 	    		</p>
     		</div>
     	</header>
