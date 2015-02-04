@@ -51,7 +51,7 @@ function randomQuestions() {
 	Récupérer les questions de la db et les foutres en sessions pour éviter les queries 
 */
 
-if(isset($_SESSION['questionsTrue']) or isset($_SESSION['questionsFalse'])) {
+if(isset($_SESSION['questionsTrue']) and isset($_SESSION['questionsFalse'])) {
 	$questions = randomQuestions();
 }
 
