@@ -34,19 +34,40 @@ function getDatas($sql)
 		return $datas;
 	}
 
-// $questions = mysql_query("set names 'utf8'");
-// $getQuestions = "SELECT * FROM questions ORDER BY RAND() LIMIT 10";
-// $questions = getdatas($getQuestions);
-//$questions = utf8_encode($questions);
+function randomQuestions() {
 
-$questionsTrue = mysql_query("set names 'utf8'");
-//$questionsFalse = mysql_query("set names 'utf8'");
-$getQuestionsTrue = "SELECT * FROM questions WHERE answer=1 ORDER BY RAND() LIMIT 5";
-$questionsTrue = getdatas($getQuestionsTrue);
-$getQuestionsFalse = "SELECT * FROM questions WHERE answer=0 ORDER BY RAND() LIMIT 5";
-$questionsFalse = getdatas($getQuestionsFalse);
+	for ($i = 1; $i <= 5; $i++) {
+		$questions[] =  $_SESSION['questionsTrue'][$i];
+		$questions[] =  $_SESSION['questionsFalse'][$i];
+		$questions = shuffle_assoc($questions);
+	}
 
-$questions =  array_merge($questionsFalse, $questionsTrue);
-$questions = shuffle_assoc($questions);
+	return $questions;
+}
+
+
+/* 
+	WHERE THE MAGIC HAPPENS
+	Récupérer les questions de la db et les foutres en sessions pour éviter les queries 
+*/
+
+if(isset($_SESSION['questionsTrue']) or isset($_SESSION['questionsFalse'])) {
+	$questions = randomQuestions();
+}
+
+else {
+
+	$_SESSION['questionsTrue'] = mysql_query("set names 'utf8'");
+	$_SESSION['questionsFalse'] = mysql_query("set names 'utf8'");
+	
+	$getQuestionsTrue = "SELECT * FROM questions WHERE answer=1 ORDER BY RAND()";
+	$_SESSION['questionsTrue'] = getdatas($getQuestionsTrue);
+	
+	$getQuestionsFalse = "SELECT * FROM questions WHERE answer=0 ORDER BY RAND()";
+	$_SESSION['questionsFalse'] = getdatas($getQuestionsFalse);
+
+	$questions = randomQuestions();
+
+}
 
 ?>
