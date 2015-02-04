@@ -34,12 +34,17 @@ function getDatas($sql)
 		return $datas;
 	}
 
+
 function randomQuestions() {
 
-	for ($i = 1; $i <= 5; $i++) {
-		$questions[] =  $_SESSION['questionsTrue'][$i];
-		$questions[] =  $_SESSION['questionsFalse'][$i];
-		$questions = shuffle_assoc($questions);
+	$questions = array();
+	$trueKeys = array_rand($_SESSION['questionsTrue'],5);
+	$falseKeys = array_rand($_SESSION['questionsFalse'],5);
+
+	for ($i = 0; $i <= 4; $i++) {
+	 	$questions[] =  $_SESSION['questionsTrue'][$trueKeys[$i]];
+	 	$questions[] =  $_SESSION['questionsFalse'][$falseKeys[$i]];
+	 	$questions = shuffle_assoc($questions);
 	}
 
 	return $questions;
