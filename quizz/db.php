@@ -7,8 +7,8 @@ DEFINE ('PASS', 'root');
 DEFINE ('HOST', 'localhost');
 DEFINE ('DB', 'questions');
 
-$link = mysql_connect(HOST, LOGIN, PASS) or die ('Impossible de se connecter au serveur');
-$succes = mysql_select_db(DB) or die ('Impossible de sélectionner la db');
+$link = mysqli_connect(HOST, LOGIN, PASS, DB) or die ('Impossible de se connecter au serveur : '.mysqli_connect_error());
+//$succes = mysql_select_db(DB) or die ('Impossible de sélectionner la db');
 
 function shuffle_assoc($list) { 
   if (!is_array($list)) return $list; 
@@ -24,10 +24,10 @@ function shuffle_assoc($list) {
 
 function getDatas($sql) 
 	{
-		$result = mysql_query($sql);
+		$result = mysqli_query($sql);
 		$datas = array();
 		
-		while ($data = mysql_fetch_assoc($result))
+		while ($data = mysqli_fetch_assoc($result))
 				{
 					$datas[] = $data;
 				}
@@ -62,8 +62,8 @@ if(isset($_SESSION['questionsTrue']) and isset($_SESSION['questionsFalse'])) {
 
 else {
 
-	$_SESSION['questionsTrue'] = mysql_query("set names 'utf8'");
-	$_SESSION['questionsFalse'] = mysql_query("set names 'utf8'");
+	$_SESSION['questionsTrue'] = mysqli_query("set names 'utf8'");
+	$_SESSION['questionsFalse'] = mysqli_query("set names 'utf8'");
 	
 	$getQuestionsTrue = "SELECT * FROM questions WHERE answer=1 ORDER BY RAND()";
 	$_SESSION['questionsTrue'] = getdatas($getQuestionsTrue);
