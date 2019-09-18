@@ -8,6 +8,4 @@ Au départ d'une blague partie de Facebook, le générateur a été utilisé dan
 
 
 * Source: [Github](https://github.com/ppnelles/presque-titres)
-* Page: [presquetitres.be](http://ppnelles.com/presquetitres/)
-* Facebook: [Fan page] (https://www.facebook.com/pages/Le-générateur-de-Presque-Titres/1745427352349685)
-* Twitter: [@presquetitres](http://twitter.com/presquetitres)
+* Page: [ppnelles.com/presquetitres/](http://ppnelles.com/presquetitres/)
